@@ -5,33 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/calculos.css" />
     <title>Factorial de n</title>
-    <script>
-        // Definir variables
-        var n = 0;
-
-        // Funcion para leer numeros Reales
-        function leerNumero() {
-            num = parseInt(
-                prompt("Porfi, escribe un número")
-            );
-            return num;
-        }
-
-        function mostrarResultados() {
-            document.getElementById('td1').innerHTML = n;
-            document.getElementById('td2').innerHTML = factorial();
-        }
-
-        function factorial() {
-            var factorial = 1;
-            for ( i=1; i <= n; i++ ) {
-                factorial = factorial * i;
-            }
-
-            return factorial;
-        }
-
-    </script>
+    <script src="js/calculos.js"></script>
 </head>
 
 <body>
@@ -40,13 +14,12 @@
     </header>
     <nav></nav>
     <main>
-
         <article class="botones">
             <h2>Múltiplos de 'n' hasta 'm'</h2>
             <p>
                 <input type="button" onclick="n = leerNumero()" value="Primer número" />
                 <input type="button" onclick="m = leerNumero()" value="Segundo número" />
-                <input type="button" onclick="mostrarResultados()" value="Mostrar resultados" />
+                <input type="button" onclick="mostrarMultiplos(n, m)" value="Mostrar resultados" />
             </p>
 
             <table class="resultados">
@@ -71,8 +44,8 @@
         <article class="botones">
             <h2>Factorial de 'n'</h2>
             <p>
-                <input type="button" onclick="n = leerNumero()" value="Primer número" />
-                <input type="button" onclick="mostrarResultados()" value="Mostrar resultados" />
+                <input type="button" onclick="pepe = leerNumero()" value="Primer número" />
+                <input type="button" onclick="mostrarFactorial(pepe)" value="Mostrar resultados" />
             </p>
             <table class="resultados">
                 <caption>Tabla de resultados</caption>
