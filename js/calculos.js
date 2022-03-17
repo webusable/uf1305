@@ -9,7 +9,7 @@ function leerNumero() {
     return num;
 }
 
-function mostrarMultiplos(n, m) {
+function mostrarMultiplo(n, m) {
     document.getElementById('td11').innerHTML = n;
     document.getElementById('td12').innerHTML = m;
     document.getElementById('td13').innerHTML = multiplosDeHasta(n, m);
@@ -22,9 +22,21 @@ function mostrarFactorial( nf ) {
 }
 
 
-function mostrarResultados( nf ) {
-    document.getElementById('td21').innerHTML = nf;
-    document.getElementById('td22').innerHTML = factorial( nf );
+function mostrarResultados( op, n1, n2 = 0 ) {
+
+    switch (op) {
+        case 'multiplo':
+            document.getElementById('td11').innerHTML = n1;
+            document.getElementById('td12').innerHTML = n2;
+            document.getElementById('td13').innerHTML = multiplosDeHasta(n1, n2);
+        break;
+
+        case 'factorial' :
+            document.getElementById('td21').innerHTML = n1;
+            document.getElementById('td22').innerHTML = factorial( n1 );
+        break;
+        default:
+    }
 }
 
 
