@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/calculos.css" />
+    <title>Factorial de n</title>
+    <script src="../js/calculos.js"></script>
+    <script>
+        var n;
+        var factorial = factorial(n);
+
+        var a = 10;
+        var b = 1000;
+        var tmultiplos = multiplosDeHasta(a, b);
+
+        var x = 7;
+        var y = 100;
+        var suma = sumar(x, y);
+
+        var p1 = 2;
+        var p2 = 5;
+        var producto = multiplicar(p1, p2);
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Calculos con JavaScript</h1>
+    </header>
+    <nav></nav>
+    <main>
+        <article>
+            <h2>Escribir factorial de un número con document.write()</h2>
+            <p>
+                <input type="button" onclick="n = leerNumero()" value="Numero a calcular su factorial" />
+            </p>
+            <script>
+                document.write("El factorial de " + n + " es " + factorial);
+            </script>
+        </article>
+        <article>
+            <h2>Escribir los múltiplos de n hasta m</h2>
+            <p>
+                <script>
+                    document.write(tmultiplos);
+                </script>
+            </p>
+        </article>
+        <article>
+            <h2>Escribir el resultado de la suma de 2 números</h2>
+            <p>
+                <script>
+                    document.write(
+                        "La suma de "
+                        + x
+                        + " y "
+                        + y
+                        + " es igual a "
+                        + suma
+                        + "."
+                    );
+                    // document.write("<br/>");
+                    // document.write("La suma de x y y es igual a suma");
+                </script>
+            </p>
+        </article>
+        <article>
+            <h2>Escribir el resultado del producto de dos números</h2>
+
+            <p>
+                <script>
+                    document.write(
+                        "El producto de " +
+                        p1 +
+                        " y " +
+                        p2 +
+                        " es igual a " +
+                        producto
+                    );
+                </script>
+            </p>
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer></footer>
+</body>
