@@ -16,3 +16,17 @@ table.resultados td {
 article.botones input {
     padding: 0.5em 1em;
 }
+
+ul.sumando {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul.sumando li {
+    display: inline-block;
+}
+
+ul.sumando input {
+    padding: 0.5em;
+}
