@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header1">
         <h1>Calculos con JavaScript</h1>
     </header>
     <nav></nav>
@@ -43,13 +43,17 @@
                 <button onclick="ald = leerTexto()">
                     Aldea
                 </button>
-                <button onclick="mostrarTexto('ald1', ald)">Mostrar Aldea</button>
+                <button onclick="mostrarInfo('ald1', 'em', 'Aldea: ',ald)">Mostrar Aldea</button>
             </p>
             <p>
                 <button onclick="clan = leerTexto()">
                     Clan
                 </button>
-                <button onclick="mostrarTexto('clan1', clan)">Mostrar Clan</button>
+                <button onclick="mostrarInfo('clan1', 'strong', 'Clan: ', clan)">Mostrar Clan</button>
+                <!-- <button onclick="mostrarTexto(
+                    'clan1',
+                    '<strong>Abril y Diana</strong> son las más guapas del Reino'
+                )">Mostrar Clan</button> -->
             </p>
 
             <p id="pj1"></p>

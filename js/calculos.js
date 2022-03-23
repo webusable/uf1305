@@ -25,18 +25,15 @@ function mostrarTexto( id, texto ){
     elemento.innerHTML = texto;
 }
 
+
 function mostrarInfo(id, tag, info, texto){
-    var etiqueta = "<" + tag + ">";
-    etiqueta += info;
-    etiqueta += "</" + tag + "> ";
-    etiqueta += texto;
+    var contenido = "<" + tag + ">";
+    contenido += info;
+    contenido += "</" + tag + "> ";
+    contenido += texto;
 
-    // var etiqueta = "<" + tag + ">"
-    //     + info
-    //     + "</" + tag + "> "
-    //     + texto;
 
-    mostrarTexto( id, etiqueta );
+    mostrarTexto( id, contenido );
 }
 
 function mostrarMultiplo(n, m) {
