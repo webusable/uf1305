@@ -67,6 +67,76 @@ function mostrarTodo(id, personaje, aldea, clan, poder, vidas) {
     elemento.innerHTML = lis;
 }
 
+
+function mostrarLista(id, personaje, aldea, clan, poder, vidas) {
+
+    var personaje = "<strong>Personaje: </strong>" + personaje;
+    var aldea = "<strong>Aldea: </strong>" + aldea;
+    var clan = "<strong>Clan: </strong>" + clan;
+    var poder = "<strong>Superpoder: </strong>" + poder;
+    var vidas = "<strong>Vidas: </strong>" + vidas;
+
+    // Creamos una instancia de la ul con id = datos
+    var lista = document.getElementById( id );
+
+    // Creamos una instancia de un elemento HTML li vacío
+    var item = document.createElement("li");
+
+    // Agregamos contenido a ese elemento html li
+    item.innerHTML = personaje;
+
+    // Insertamos el elemento li y su contenido como último hijo
+    // de la ul id = datos.
+    lista.appendChild( item );
+
+    // Ídem para el li con la info de la Aldea
+    item = document.createElement("li");
+    item.innerHTML = aldea;
+    lista.appendChild( item );
+
+    // Ídem para el li con la info de la Clan
+    item = document.createElement("li");
+    item.innerHTML = clan;
+    lista.appendChild( item );
+
+    // Ídem para el li con la info de la Poder
+    item = document.createElement("li");
+    item.innerHTML = poder;
+    lista.appendChild( item );
+
+    // Ídem para el li con la info de la Vidas
+    item = document.createElement("li");
+    item.innerHTML = vidas;
+    lista.appendChild( item );
+}
+
+
+function mostrarElemento(id, personaje, aldea, clan, poder, vidas) {
+
+    var personaje = "<strong>Personaje: </strong>" + personaje;
+    var aldea = "<strong>Aldea: </strong>" + aldea;
+    var clan = "<strong>Clan: </strong>" + clan;
+    var poder = "<strong>Superpoder: </strong>" + poder;
+    var vidas = "<strong>Vidas: </strong>" + vidas;
+
+    // Creamos una instancia de la ul con id = datos
+    var lista = document.getElementById( id );
+
+    addChild( lista, 'li', personaje );
+    addChild( lista, 'li', aldea );
+    addChild( lista, 'li', clan );
+    addChild( lista, 'li', poder );
+    addChild( lista, 'li', vidas );
+}
+
+// function addChild ( lista , 'li', personaje ) {
+function addChild ( elemento, tag, contenido ) {
+    item = document.createElement( tag );
+    item.innerHTML = contenido;
+    lista.appendChild( elemento );
+}
+
+
 function mostrarMultiplo(n, m) {
     document.getElementById('td11').innerHTML = n;
     document.getElementById('td12').innerHTML = m;
