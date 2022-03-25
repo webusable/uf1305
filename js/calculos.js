@@ -110,9 +110,9 @@ function mostrarLista(id, personaje, aldea, clan, poder, vidas) {
     lista.appendChild( item );
 }
 
-
 function mostrarElemento(id, personaje, aldea, clan, poder, vidas) {
 
+    // Crear Strings con el contenido de los ítems
     var personaje = "<strong>Personaje: </strong>" + personaje;
     var aldea = "<strong>Aldea: </strong>" + aldea;
     var clan = "<strong>Clan: </strong>" + clan;
@@ -122,11 +122,110 @@ function mostrarElemento(id, personaje, aldea, clan, poder, vidas) {
     // Creamos una instancia de la ul con id = datos
     var lista = document.getElementById( id );
 
+    // Agregamos elementos HTML li's a la lista con id = datos
     addChild( lista, 'li', personaje );
     addChild( lista, 'li', aldea );
     addChild( lista, 'li', clan );
     addChild( lista, 'li', poder );
     addChild( lista, 'li', vidas );
+}
+
+
+function mostrarElemento2(id, personaje, aldea, clan, poder, vidas) {
+
+    // var personaje = "<strong>Personaje: </strong>" + personaje;
+    var strong = document.createElement('strong');
+    strong.innerHTML = "Personaje: ";
+    var personaje = strong.outerHTML + personaje;
+
+    // var aldea = "<strong>Aldea: </strong>" + aldea;
+    strong = document.createElement('strong');
+    strong.innerHTML = "Aldea: ";
+    var aldea = strong.outerHTML + aldea;
+
+    // var clan = "<strong>Clan: </strong>" + clan;
+    strong = document.createElement('strong');
+    strong.innerHTML = "Clan: ";
+    var clan = strong.outerHTML + clan;
+
+    // var poder = "<strong>Superpoder: </strong>" + poder;
+    strong = document.createElement('strong');
+    strong.innerHTML = "Superpoder: ";
+    var poder = strong.outerHTML + poder;
+
+    // var vidas = "<strong>Vidas: </strong>" + vidas;
+    strong = document.createElement('strong');
+    strong.innerHTML = "Vidas: ";
+    var vidas = strong.outerHTML + vidas;
+
+
+    // Creamos una instancia de la ul con id = datos
+    var lista = document.getElementById( id );
+
+    addChild( lista, 'li', personaje );
+    addChild( lista, 'li', aldea );
+    addChild( lista, 'li', clan );
+    addChild( lista, 'li', poder );
+    addChild( lista, 'li', vidas );
+}
+
+function mostrarElemento3(id, personaje, aldea, clan, poder, vidas) {
+
+    // Creamos una instancia de la ul con id = datos
+    var lista = document.getElementById( id );
+
+    // var personaje = "<strong>Personaje: </strong>" + personaje;
+    // Creamos un elemento HTML strong vacío
+    var strong = document.createElement('strong');
+
+    // Agregamos contenido
+    strong.innerHTML = "Personaje: ";
+
+    // Creamos un elemento HTML li vacío
+    var li = document.createElement('li');
+
+    // Anidamos un hijo strong al objeto HTML li
+    li.appendChild( strong );
+
+    // Agregamos texto plano al objeto HTML li
+    li.innerHTML += personaje;
+
+    // Anidamos un hijo li al objeto HTML lista (ul id = 'datos')
+    lista.appendChild( li );
+
+
+    // var aldea = "<strong>Aldea: </strong>" + aldea;
+    strong = document.createElement('strong');
+    strong.innerHTML = "Aldea: ";
+    li = document.createElement('li');
+    li.appendChild( strong );
+    li.innerHTML += aldea;
+    lista.appendChild( li );
+
+
+    // var clan = "<strong>Clan: </strong>" + clan;
+    strong = document.createElement('strong');
+    strong.innerHTML = "Clan: ";
+    li = document.createElement('li');
+    li.appendChild( strong );
+    li.innerHTML += clan;
+    lista.appendChild( li );
+
+    // var poder = "<strong>Superpoder: </strong>" + poder;
+    strong = document.createElement('strong');
+    strong.innerHTML = "Superpoder: ";
+    li = document.createElement('li');
+    li.appendChild( strong );
+    li.innerHTML += poder;
+    lista.appendChild( li );
+
+    // var vidas = "<strong>Vidas: </strong>" + vidas;
+    strong = document.createElement('strong');
+    strong.innerHTML = "Vidas: ";
+    li = document.createElement('li');
+    li.appendChild( strong );
+    li.innerHTML += vidas;
+    lista.appendChild( li );
 }
 
 // function addChild ( lista , 'li', personaje ) {
