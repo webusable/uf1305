@@ -175,24 +175,24 @@ function mostrarElemento3(id, personaje, aldea, clan, poder, vidas) {
     var lista = document.getElementById( id );
 
     // var personaje = "<strong>Personaje: </strong>" + personaje;
-    // Creamos un elemento HTML strong vacío
+    // Creamos un objeto document HTML strong vacío
     var strong = document.createElement('strong');
 
-    // Agregamos contenido
+    // Insertamos texto en el objeto strong
     strong.innerHTML = "Personaje: ";
 
-    // Creamos un elemento HTML li vacío
+    // Creamos un objeto document HTML li vacío
     var li = document.createElement('li');
 
     // Anidamos un hijo strong al objeto HTML li
+    // Anidamos el objeto strong como último hijo del objeto li
     li.appendChild( strong );
 
-    // Agregamos texto plano al objeto HTML li
+    // Agregamos texto al elemento li
     li.innerHTML += personaje;
 
     // Anidamos un hijo li al objeto HTML lista (ul id = 'datos')
     lista.appendChild( li );
-
 
     // var aldea = "<strong>Aldea: </strong>" + aldea;
     strong = document.createElement('strong');
@@ -201,7 +201,6 @@ function mostrarElemento3(id, personaje, aldea, clan, poder, vidas) {
     li.appendChild( strong );
     li.innerHTML += aldea;
     lista.appendChild( li );
-
 
     // var clan = "<strong>Clan: </strong>" + clan;
     strong = document.createElement('strong');
@@ -226,6 +225,55 @@ function mostrarElemento3(id, personaje, aldea, clan, poder, vidas) {
     li.appendChild( strong );
     li.innerHTML += vidas;
     lista.appendChild( li );
+}
+
+
+function mostrarElemento4(id, personaje, aldea, clan, poder, vidas) {
+
+    // Creamos una instancia de elemento HTML ul con id = datos
+    var lista = document.getElementById( id );
+
+    // <li><strong>Personaje: </strong> + personaje </li>
+    li = crearSubElemento( 'strong', 'li', 'Personaje: ', personaje );
+    // Anidamos un hijo li al objeto HTML lista (ul id = 'datos')
+    lista.appendChild( li );
+
+    // <li><strong>Aldea: </strong> + aldea </li>
+    li = crearSubElemento( 'strong', 'li', 'Aldea: ', aldea );
+    lista.appendChild( li );
+
+    // <li><strong>Clan: </strong> + clan</li>
+    li = crearSubElemento( 'strong', 'li', 'Clan: ', clan );
+    lista.appendChild( li );
+
+    // <li><strong>Superpoder: </strong> + poder</li>
+    li = crearSubElemento( 'strong', 'li', 'Superpoder: ', poder);
+    lista.appendChild( li );
+
+    // <li><strong>Vidas: </strong> + vidas</li>
+    li = crearSubElemento( 'strong', 'li', 'Vidas: ', vidas);
+    lista.appendChild( li );
+}
+
+function crearSubElemento ( tag1, tag2, prefijo, sufijo ) {
+
+    // Creamos un objeto document HTML tag1 vacío
+    var subelemento = document.createElement(tag1);
+
+    // Insertamos texto en el subelemento
+    subelemento.innerHTML = prefijo;
+
+    // Creamos un objeto document HTML tag2 vacío
+    elemento = document.createElement(tag2);
+
+    // Anidamos subelemento como último hijo de elemento
+    elemento.appendChild( subelemento );
+
+    // Agregamos texto al elemento
+    elemento.innerHTML += sufijo;
+
+    // Retornamos el objeto elemento montado
+    return elemento;
 }
 
 // function addChild ( lista , 'li', personaje ) {
