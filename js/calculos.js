@@ -133,7 +133,7 @@ function mostrarElemento(id, personaje, aldea, clan, poder, vidas) {
 function addChild ( elemento, tag, contenido ) {
     item = document.createElement( tag );
     item.innerHTML = contenido;
-    lista.appendChild( elemento );
+    elemento.appendChild( item );
 }
 
 
