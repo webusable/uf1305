@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>UF1305</title>
+        <script src="../js/cuadernillo.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <nav></nav>
+        <main>
+            <article>
+                <h2>Cuadernillo de prácticas UF1305</h2>
+                <p>1.- Pida el nombre al usuario y múestrelo en un id="nombre"</p>
+                <p>
+                    <button onclick="nombre = leerNombre()">Escriba su nombre</button>
+                </p>
+                <p>
+                    <button onclick="escribirTexto('nombre', nombre + ' piensa un número del 0 al 10')">Jugar al adivino</button>
+                </p>
+                <p id="nombre"></p>
+                <script>
+                    adivino();
+                </script>
+                <p id="respuesta"></p>
+            </article>
+        </main>
+        <footer></footer>
+    </body>
+</html>
