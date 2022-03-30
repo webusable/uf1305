@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicios JS</title>
+        <script>
+            var nombre = "Sonia";
+            var apellidos = "Álvarez";
+            var a, b;
+
+            // Ejercicio de sumar 2 números
+            function leerNumero() {
+                var num = parseFloat(prompt('Dame un número para la suma'));
+                return num;
+            }
+
+            function sumar() {
+                var s = a + b;
+                alert('La suma de ' + a + ' más ' + b + ' es ' + s);
+            }
+
+            function sumar2 () {
+                var s = a + b;
+                return s;
+            }
+
+            function sumar3(s1, s2) {
+                var s = s1 + s2;
+                return s;
+            }
+
+            function producto(f1, f2) {
+                var producto = f1 * f2;
+                return producto;
+            }
+        </script>
+    </head>
+    <body onload="alert('Página cargada')">
+        <header>
+            <h1>Básico 1</h1>
+        </header>
+        <nav></nav>
+        <main>
+            <article>
+                <h2>Escribiendo en el body</h2>
+                <p>
+                    <!-- Esto es un comentario en HTML -->
+                    <script>
+                        // Esto es un comentario de una línea en JavaScript
+                        /*
+                            Es es un comentario
+                            de varias líneas en JavaScript
+                        */
+                        document.write("Escribiendo en el cuerpo");
+                        document.write('<br/>');
+                        document.write('Nombre: ' + nombre);
+                        document.write('<br/>');
+                        document.write('Apellidos: ' + apellidos);
+                        document.write('<br/>');
+                    </script>
+                </p>
+            </article>
+            <article>
+                <h2>Sumar 2 números</h2>
+                <p>
+                    <button onclick="a = leerNumero()">Dame el primer sumando</button>
+                    <button onclick="b = leerNumero()">Dame el segundo sumando</button>
+                    <button onclick="sumar()">Dame la suma</button>
+                    <button onclick="alert( 'La suma es ' + sumar2() )">Dame la suma 2</button>
+                    <button onclick="alert( sumar3(a,b) )">Dame la suma 3</button>
+                </p>
+                <p>
+                    <script>
+                        document.write(
+                            'La suma de ' +
+                            a +
+                            ' más ' +
+                            b +
+                            ' es ' +
+                            sumar2()
+                        );
+                    </script>
+                </p>
+            </article>
+            <article>
+                <h2>Tabla de multiplicar</h2>
+                <ul>
+                    <script>
+                        var f = 9;
+                        var p;
+                        for (i = 0; i <= 10; i++) {
+                            // p = f * i;
+                            p = producto(f, i);
+                            document.write('<li>');
+                                document.write( f + ' x ' + i + ' = ' + p);
+                            document.write('</li>');
+                        }
+                    </script>
+                </ul>
+            </article>
+        </main>
+        <footer></footer>
+    </body>
+</html>
